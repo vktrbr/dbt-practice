@@ -14,8 +14,8 @@ load_dotenv()
 MONGO_CONFIG = {
     "username": os.getenv("MONGO_INITDB_ROOT_USERNAME"),
     "password": os.getenv("MONGO_INITDB_ROOT_PASSWORD"),
-    # "host": os.getenv("MONGO_HOST"),
-    "host": "0.0.0.0",
+    "host": os.getenv("MONGO_HOST"),
+    # "host": "0.0.0.0",
     "port": int(os.getenv("MONGO_PORT")),
     "authSource": "admin",
 }
