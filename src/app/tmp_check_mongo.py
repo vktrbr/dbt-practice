@@ -25,7 +25,10 @@ if __name__ == "__main__":
     result = collection.find(
         {
             "status_code": 200
-        }
+            # order by created_at descending
+        },
+        sort=[("created_at", 1)],
+        limit=5
     )
 
     print(json.dumps(list(result), indent=4, default=str))
