@@ -1,9 +1,9 @@
-from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
 from datetime import datetime, timedelta
 
-from loguru import logger
 import requests
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+from loguru import logger
 
 # Barcelona coordinates
 LAT = 41.3896
@@ -82,7 +82,7 @@ dag = DAG(
     'weather_api',
     default_args=default_args,
     description='Utilise weather API',
-    schedule_interval='15,16,17,18 11 * * *'
+    schedule_interval='0 */6 * * *'  # every 6 hours = 4 times a day
 )
 
 with dag:
