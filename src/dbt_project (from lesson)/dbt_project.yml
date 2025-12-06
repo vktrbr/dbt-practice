@@ -48,3 +48,6 @@ models:
       +materialized: incremental
       +schema: dm
       +incremental_strategy: merge
+
+  elementary:
+    +schema: elementary

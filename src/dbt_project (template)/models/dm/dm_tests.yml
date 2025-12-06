@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dm_air_quality
+    description: "Аналитическая витрина для данных о качестве воздуха"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+      - name: region_code
+        description: "Код региона, запрашиваем только для Барселоны, поэтому сделаем warning на другие значения"
+        tests:
+          - accepted_values:
+              values: [ 'es' ]
+              config:
+                severity: warn

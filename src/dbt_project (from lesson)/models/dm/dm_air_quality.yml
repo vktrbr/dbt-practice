@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dm_air_quality
+    columns:
+      - name: air_quality_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+      - name: aqi
+        description: "Air Quality Index value"
+        data_tests:
+          - not_null:
+              config:
+                severity: warn
+
+
+      - name: region_code
+        description: "Код региона, запрашиваем только для Барселоны, поэтому сделаем warning на другие значения"
+        tests:
+          - accepted_values:
+              values: [ 'es' ]
+              config:
+                severity: warn
