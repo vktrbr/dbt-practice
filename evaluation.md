@@ -1,5 +1,20 @@
 # Правила оценивания проекта
 
+СДАЧА ВСЕХ АРТЕФАКТОВ НА СТРАНИЧКЕ `Scores` [ТУТ](https://docs.google.com/spreadsheets/d/1n39RvLhlCHwirxLPV6lge7URkHKzZG7dc62NFS9t1MU/edit?gid=909308968#gid=909308968)
+
+Одним комментарием по формату 
+```
+Swagger URL:  
+MongoDB URL: 
+PostgreSQL URL: 
+Airflow:
+   URL:
+   User:
+   Password: 
+Elementary edr report URL:  
+Презентация URL:
+```
+
 ## Общие положения
 
 1. Студент сдаёт курс, выполнив один из трёх предложенных проектов или собственную тему,
