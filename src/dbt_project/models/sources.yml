@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: air_quality
+    schema: raw
+    # Эта настройка проверяет, что данные в таблице обновляются не реже чем раз в день
+    freshness:
+      warn_after: { count: 1, period: day }
+      error_after: { count: 2, period: day }
+    loaded_at_field: valid_from_dttm
+    tables:
+      - name: air_quality

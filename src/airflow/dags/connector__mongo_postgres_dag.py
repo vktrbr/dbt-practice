@@ -6,7 +6,7 @@ from connector__mongo_postgres_logic import move_data_to_postgres
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2025, 11, 29),
+    'start_date': datetime(2025, 12, 6),
     'retries': 0,
 }
 
@@ -14,7 +14,7 @@ dag = DAG(
     'connector__mongo_postgres',
     default_args=default_args,
     description='Utilise weather API',
-    schedule_interval='@daily',
+    schedule_interval='*/5 * * * *',
 )
 
 with dag:

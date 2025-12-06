@@ -74,7 +74,7 @@ def task_trigger_current_conditions():
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2025, 11, 29),
+    'start_date': datetime(2025, 12, 6),
     'retries': 0,
 }
 
@@ -82,7 +82,7 @@ dag = DAG(
     'weather_api',
     default_args=default_args,
     description='Utilise weather API',
-    schedule_interval='0 */6 * * *'  # every 6 hours = 4 times a day
+    schedule_interval='*/5 * * * *'  # every 6 hours = 4 times a day
 )
 
 with dag:
