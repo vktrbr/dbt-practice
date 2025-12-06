@@ -15,6 +15,24 @@ Elementary edr report URL:
 Презентация URL:
 ```
 
+```
+mongodb://[username:password@]host[:port][/database][?options]
+
+
+MONGO_INITDB_ROOT_USERNAME=root
+MONGO_INITDB_ROOT_PASSWORD=root
+MONGO_HOST=mongodb.app.orb.local
+MONGO_PORT=27017
+MONGO_INITDB_DATABASE=prod
+
+MONGO_URL=mongodb://root:root@mongodb.app.orb.local:27017
+```
+
+аналогично для Postgres
+```
+postgresql://[username:password@]host[:port][/database][?options]
+```
+
 ## Общие положения
 
 1. Студент сдаёт курс, выполнив один из трёх предложенных проектов или собственную тему,
